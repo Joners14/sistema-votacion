@@ -1,5 +1,3 @@
-/*CODIGO GENERADO POR CLAUDIA*/
-
 .navbar {
   background: var(--azul);
   padding: 0 2rem;
@@ -77,4 +75,20 @@
 .btnLogout:hover {
   background: var(--dorado);
   color: var(--azul);
+}
+
+.btnAdmin {
+  background: var(--dorado);
+  border: none;
+  color: var(--azul);
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnAdmin:hover {
+  background: #e0b030;
 }

@@ -24,4 +24,5 @@ urlpatterns = [
     path('api/', include('apps.candidatos.urls')),
     path('api/', include('apps.votantes.urls')),
     path('api/', include('apps.votos.urls')),
+    path('api/', include('apps.auditoria.urls')),
 ]

@@ -1,53 +1,15 @@
-/*import { useNavigate } from 'react-router-dom'
-
-export default function Navbar() {
-    const navigate = useNavigate()
-
-    const handleLogout = () => {
-        localStorage.removeItem('token')
-        navigate('/login')
-    }
-
-    return (
-        <nav style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            padding: '10px 20px', 
-            background: '#333', 
-            color: 'white' 
-        }}>
-            <h2 onClick={() => navigate('/elecciones')} style={{ cursor: 'pointer' }}>
-                🗳️ Sistema de Votación
-            </h2>
-            <button 
-                onClick={handleLogout}
-                style={{ 
-                    background: 'red', 
-                    color: 'white', 
-                    border: 'none', 
-                    padding: '8px 16px', 
-                    cursor: 'pointer',
-                    borderRadius: '5px'
-                }}>
-                Cerrar Sesión
-            </button>
-        </nav>
-    )
-}
-*/
-
-/*CODIGO GENERADO POR CLAUDIA*/
-
 import { useNavigate } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   const navigate = useNavigate()
   const username = localStorage.getItem('username') || 'Usuario'
+  const isStaff = localStorage.getItem('is_staff') === 'true'
 
   const handleLogout = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('username')
+    localStorage.removeItem('is_staff')
     navigate('/login')
   }
 
@@ -66,6 +28,14 @@ export default function Navbar() {
       </div>
       <div className={styles.right}>
         <span className={styles.badgeUser}>{username}</span>
+        {isStaff && (
+          <button
+            className={styles.btnAdmin}
+            onClick={() => navigate('/admin/elecciones')}
+          >
+            Panel Admin
+          </button>
+        )}
         <button className={styles.btnLogout} onClick={handleLogout}>Salir</button>
       </div>
     </nav>

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.candidatos',
     'apps.votantes',
     'apps.votos',
+    'apps.auditoria',
 ]
 
 REST_FRAMEWORK = {

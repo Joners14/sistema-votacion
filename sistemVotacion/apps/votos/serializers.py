@@ -14,6 +14,12 @@ class VotoSerializer(serializers.ModelSerializer):
         eleccion = data.get('eleccion')
         candidato = data.get('candidato')
         usuario = self.context['request'].user
+        
+        #cierre automatico si la fecha ya paso
+        ahora = timezone.now()
+        if eleccion.estado == 'activa' and ahora > eleccion.fecha_cierre:
+            eleccion.estado = 'cerrada'
+            eleccion.save()
 
         # Verificar que la elección esté activa
         if eleccion.estado != 'activa':

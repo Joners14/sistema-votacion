@@ -1,5 +1,3 @@
-/*NUEVO ARCHIVO CREADO POR CLAUDIA PARA EL ADMIN*/
-
 import { useNavigate, useLocation } from 'react-router-dom'
 import styles from './AdminLayout.module.css'
 
@@ -7,6 +5,7 @@ const menuItems = [
   { label: 'Elecciones', path: '/admin/elecciones', icon: '🗳️' },
   { label: 'Candidatos', path: '/admin/candidatos', icon: '👤' },
   { label: 'Votantes', path: '/admin/votantes', icon: '👥' },
+  { label: 'Auditoría', path: '/admin/auditoria', icon: '📊' },
 ]
 
 export default function AdminLayout({ children }) {

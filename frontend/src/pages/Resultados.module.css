@@ -23,6 +23,16 @@
   gap: 8px;
 }
 
+.subtitulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--azul);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .dot {
   width: 8px;
   height: 8px;
@@ -56,9 +66,52 @@
   font-family: 'DM Sans', sans-serif;
 }
 
-.select:focus {
-  border-color: var(--azul-medio);
+.select:focus { border-color: var(--azul-medio); }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
+
+.statCard {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.statNum {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--azul);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--texto-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 6px;
+}
+
+.estado {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+
+.estadoActiva { background: var(--verde-claro); color: var(--verde); }
+.estadoBorrador { background: #fff8e1; color: #f57f17; }
+.estadoCerrada { background: var(--rojo-claro); color: var(--rojo); }
 
 .lista {
   display: flex;
@@ -86,9 +139,7 @@
   color: var(--azul);
 }
 
-.ganador {
-  font-size: 1rem;
-}
+.ganador { font-size: 1rem; }
 
 .itemPct {
   font-family: 'Playfair Display', serif;

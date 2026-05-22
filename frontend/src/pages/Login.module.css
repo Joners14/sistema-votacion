@@ -110,3 +110,36 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+
+
+
+/**/
+
+ 
+.exito {
+  background: var(--verde-claro);
+  color: var(--verde);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--verde);
+}
+ 
+.link {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--texto-muted);
+}
+ 
+.link a {
+  color: var(--azul-medio);
+  text-decoration: none;
+  font-weight: 500;
+}
+ 
+.link a:hover {
+  text-decoration: underline;
+}
